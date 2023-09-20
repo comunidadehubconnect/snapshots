@@ -15,7 +15,7 @@
 
 Contabo: [Contabo VPS](https://contabo.com/en/vps/) Documentação: [Contabo API](https://api.contabo.com/).
 
-gitclone https://github.com/thenik/contabo-snapshot
+git clone https://github.com/thenik/contabo-snapshot
 
 nano /contabo-snapshot/config.conf
 
