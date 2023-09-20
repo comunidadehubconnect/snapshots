@@ -15,21 +15,32 @@
 
 Contabo: [Contabo VPS](https://contabo.com/en/vps/) Documentação: [Contabo API](https://api.contabo.com/).
 
+```bash
 git clone https://github.com/thenik/contabo-snapshot
+```
 
+```bash
 nano /contabo-snapshot/config.conf
+```
 
 # credentials to use Contabo API
+
+```bash
 CLIENT_ID=my-ID-client
 CLIENT_SECRET=my-client-secret
 API_USER=my-contabo-API-username
 API_PASSWORD='my-contabo-API-password
+```
 
+```bash
 sudo apt install jq
+```
 
 ## Execute Script
 
+```bash
 ./contabo_snapshot.sh
+```
 
 ou
 
