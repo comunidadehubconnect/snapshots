@@ -1,0 +1,66 @@
+{
+  "name": "ContaboVPSSnapshot",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "id": "a91ebcc3-cce5-4e92-8c2c-84063c0b85f9",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        540,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "command": "./contabo_snapshot.sh",
+        "cwd": "/root/contabo-snapshot"
+      },
+      "id": "96cf5e3d-3536-49e3-9f1e-653c58b486c0",
+      "name": "SSH",
+      "type": "n8n-nodes-base.ssh",
+      "typeVersion": 1,
+      "position": [
+        760,
+        220
+      ],
+      "credentials": {
+        "sshPassword": {
+          "id": "ThcMe8DlKFWiuDSr",
+          "name": "SSH Password account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "SSH",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "db439c7e-89a9-42fc-abdc-32297828e207",
+  "id": "zhkPFVzuYXYfSLCo",
+  "meta": {
+    "instanceId": "db6967b3250b016c04716c63df7dbc003d482e7989c914380ce8cc05dcf118fc"
+  },
+  "tags": []
+}
