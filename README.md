@@ -36,11 +36,13 @@ API_PASSWORD='my-contabo-API-password
 sudo apt install jq
 ```
 
-## Execute Script
+## Executando o Script
 
-```bash
-./contabo_snapshot.sh
-```
+1. Abra o arquivo de configuração do cron com o seguinte comando:
+:~# crontab -e
+
+2. Adicione a seguinte linha ao arquivo para executar o agendamento todos os dias à meia-noite (você pode ajustar o horário conforme necessário):
+0 0 * * * /root/contabo-snapshot/contabo_snapshot.sh
 
 ou
 
